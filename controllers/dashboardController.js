@@ -9,7 +9,7 @@ const getUserLinks = async (req, res) => {
     const result = links.map((link) => ({
       id: link._id,
       originalUrl: link.longUrl,
-      shortUrl: `${process.env.CLIENT_URL}/${link.shortCode}`,
+      shortUrl: `${process.env.CLIENT_URL}/path/${link.shortCode}`,
       totalClicks: link.clickCount,
       createdAt: link.createdAt,
       expiresAt: link.expiresAt,

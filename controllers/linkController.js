@@ -29,7 +29,7 @@ const createShortLink = async (req, res) => {
     });
 
     res.status(201).json({
-      shortUrl: `${process.env.CLIENT_URL}/${shortCode}`,
+      shortUrl: `${process.env.CLIENT_URL}/path/${shortCode}`,
       ...newLink._doc,
     });
   } catch (err) {

@@ -14,10 +14,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors(
-  {origin:'https://url-shortner-frontend-snk2.onrender.com',
-  Credential:true}
-));
+app.use(cors());
 app.use(express.json());
 
 // Routes
