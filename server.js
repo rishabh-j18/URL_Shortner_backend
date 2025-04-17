@@ -22,7 +22,7 @@ app.use("/api/auth", authRoutes); //done working
 app.use("/api/shorten", linkRoutes); //done working
 app.use("/api/analytics", analyticsRoutes); 
 app.use("/api/dashboard", dashboardRoutes);
-app.get("/:shortCode", redirectToOriginal);
+app.use("/:shortCode", redirectToOriginal);
 
 // Mongo Connection
 mongoose.connect(process.env.MONGO_URI)
